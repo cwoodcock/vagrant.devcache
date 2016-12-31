@@ -1,0 +1,14 @@
+---
+
+- hosts: all
+  become: yes
+  roles:
+    - cwoodcock.docker
+    - delphix.package-caching-proxy
+  vars:
+    apt_cache_server_vhost_name: "{{ ansible_hostname }} {{ ansible_fqdn }}"
+    devpi_server_vhost_name: "{{ ansible_hostname }} {{ ansible_fqdn }}"
+    docker_registry_vhost_name: "{{ ansible_hostname }} {{ ansible_fqdn }}"
+    nginx_caching_proxy_server_vhost_name: "{{ ansible_hostname }} {{ ansible_fqdn }}"
+    npmjs_server_vhost_name: "{{ ansible_hostname }} {{ ansible_fqdn }}"
+    yum_repo_vhost_name: "{{ ansible_hostname }} {{ ansible_fqdn }}"

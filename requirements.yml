@@ -1,0 +1,7 @@
+---
+
+- src: https://github.com/cwoodcock/ansible.docker
+  version: master
+  name: cwoodcock.docker
+
+- src: delphix.package-caching-proxy
